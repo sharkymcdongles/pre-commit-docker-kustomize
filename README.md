@@ -1,7 +1,7 @@
-# pre-commit-docker-kustomize
-pre-commit hook which runs kustomize docker image. Docker image is based on https://github.com/lyft/kustomizer, but added github.com into known hosts and not running this image as root. This modification allows for remote refs in your kustomize. Other git providers will probably won't work and require further changes. Please raise an issue.
+# pre-commit-kustomize
+pre-commit hook which runs kustomize. This is a system hook, so you need to provide an image or place to run where kustomize already exists.
 
-## Example of .pre-commit-config.yaml that verifies that 3 overlays are not broken
+## Example of .pre-commit-config.yaml for a flux repo with a development folder containing your kustomizations:
 ```yaml
 # See https://pre-commit.com for more information
 # See https://pre-commit.com/hooks.html for more hooks
@@ -17,13 +17,8 @@ repos:
     hooks:
     -   id: kustomize
         name: kustomize-development
-        args: [overlays/development]
+        args: [./development]
         verbose: false
-    -   id: kustomize
-        name: kustomize-staging
-        args: [overlays/staging]
-        verbose: false
-    -   id: kustomize
-        name: kustomize-production
-        args: [overlays/production]
-        verbose: false
+
+
+Forked from here: https://github.com/dmitri-lerko/pre-commit-docker-kustomize
