@@ -1,5 +1,7 @@
 # pre-commit-kustomize
-pre-commit hook which runs kustomize. This is a system hook, so you need to instlal the binary yourself. Alternatively, you can run this where kustomize already exists e.g. a gitlab-runner using an image containing a kustomize binary.
+pre-commit hook which runs kustomize. This is a system hook, so you need to install the binary yourself. Alternatively, you can run this where kustomize already exists e.g. a gitlab-runner using an image containing a kustomize binary.
+
+Binary can be found here: https://github.com/kubernetes-sigs/kustomize/releases
 
 ## Example of .pre-commit-config.yaml for a flux repo with a development folder containing your kustomizations:
 ```yaml
@@ -19,6 +21,6 @@ repos:
         name: kustomize-development
         args: [./development]
         verbose: false
-
+```
 
 Forked from here: https://github.com/dmitri-lerko/pre-commit-docker-kustomize
