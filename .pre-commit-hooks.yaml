@@ -2,6 +2,6 @@
     name: kustomize
     description: kustomize build against the configured folders
     entry: kustomize build
-    language: script
+    language: system
     always_run: true
     pass_filenames: false
