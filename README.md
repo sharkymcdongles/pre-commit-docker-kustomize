@@ -1,5 +1,5 @@
 # pre-commit-kustomize
-pre-commit hook which runs kustomize. This is a system hook, so you need to provide an image or place to run where kustomize already exists.
+pre-commit hook which runs kustomize. This is a system hook, so you need to instlal the binary yourself. Alternatively, you can run this where kustomize already exists e.g. a gitlab-runner using an image containing a kustomize binary.
 
 ## Example of .pre-commit-config.yaml for a flux repo with a development folder containing your kustomizations:
 ```yaml
