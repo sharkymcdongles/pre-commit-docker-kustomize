@@ -1,6 +1,6 @@
 -   id: kustomize
     name: kustomize
-    description: kustomize
+    description: kustomize build against the configured folders
     entry: kustomize build
     language: script
     always_run: true
