@@ -1,5 +1,5 @@
 # pre-commit-kustomize
-pre-commit hook which runs kustomize. This is a system hook, so you need to install the binary yourself. Alternatively, you can run this where kustomize already exists e.g. a gitlab-runner using an image containing a kustomize binary.
+pre-commit hook that runs kustomize build against configured folders passed via args. This is a system hook, so you need to install the binary yourself. Alternatively, you can run this where kustomize already exists e.g. a gitlab-runner using an image containing a kustomize binary.
 
 Binary can be found here: https://github.com/kubernetes-sigs/kustomize/releases
 
